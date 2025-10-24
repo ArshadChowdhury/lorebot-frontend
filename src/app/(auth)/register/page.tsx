@@ -15,7 +15,7 @@ export default function RegisterPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 bg-gradient-to-br from-slate-950 via-purple-950/20 to-slate-950">
+    <div className="min-h-screen flex items-center justify-center px-4 bg-linear-to-br from-slate-950 via-purple-950/20 to-slate-950">
       <RegisterForm />
     </div>
   );

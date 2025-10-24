@@ -80,7 +80,7 @@
 //     <div className="space-y-8">
 //       {/* Header */}
 //       <div className="text-center space-y-2">
-//         <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+//         <h1 className="text-4xl font-bold bg-linear-to-br from-purple-400 to-pink-400 bg-clip-text text-transparent">
 //           World Events
 //         </h1>
 //         <p className="text-slate-400">Major events shaping the realm</p>
@@ -364,7 +364,7 @@ export default function WorldPage() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+        <h1 className="text-4xl font-bold bg-linear-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
           World Events
         </h1>
         <p className="text-slate-400">Major events shaping the realm</p>

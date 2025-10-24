@@ -30,7 +30,7 @@ export default function DashboardPage() {
     <div className="space-y-8">
       {/* Welcome Section */}
       <div className="text-center space-y-2">
-        <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+        <h1 className="text-4xl font-bold bg-linear-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
           Welcome back, {user?.displayName || user?.username}!
         </h1>
         <p className="text-slate-400">
@@ -40,7 +40,7 @@ export default function DashboardPage() {
 
       {/* Stats Grid */}
       <div className="grid md:grid-cols-3 gap-6">
-        <Card className="bg-gradient-to-br from-purple-900/20 to-slate-800 border-purple-700/50">
+        <Card className="bg-linear-to-br 00/20 to-slate-800 border-purple-700/50">
           <CardHeader>
             <CardTitle className="flex items-center space-x-2">
               <MessageCircle className="h-5 w-5 text-purple-400" />
@@ -53,7 +53,7 @@ export default function DashboardPage() {
           </CardContent>
         </Card>
 
-        <Card className="bg-gradient-to-br from-pink-900/20 to-slate-800 border-pink-700/50">
+        <Card className="bg-linear-to-br from-pink-900/20 to-slate-800 border-pink-700/50">
           <CardHeader>
             <CardTitle className="flex items-center space-x-2">
               <Scroll className="h-5 w-5 text-pink-400" />
@@ -66,7 +66,7 @@ export default function DashboardPage() {
           </CardContent>
         </Card>
 
-        <Card className="bg-gradient-to-br from-amber-900/20 to-slate-800 border-amber-700/50">
+        <Card className="bg-linear-to-br from-amber-900/20 to-slate-800 border-amber-700/50">
           <CardHeader>
             <CardTitle className="flex items-center space-x-2">
               <Trophy className="h-5 w-5 text-amber-400" />

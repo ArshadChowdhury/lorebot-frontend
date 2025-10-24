@@ -13,7 +13,7 @@ export function Navbar() {
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/dashboard" className="flex items-center space-x-2">
           <Sparkles className="h-6 w-6 text-purple-400" />
-          <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+          <span className="text-xl font-bold bg-linear-to-br from-purple-400 to-pink-400 bg-clip-text text-transparent">
             LoreBot
           </span>
         </Link>
@@ -37,18 +37,19 @@ export function Navbar() {
           >
             World
           </Link>
-
-          <div className="flex items-center space-x-3 border-l border-slate-700 pl-6">
-            <div className="flex items-center space-x-2">
-              <User className="h-4 w-4 text-slate-400" />
-              <span className="text-sm text-slate-300">
-                {user?.displayName || user?.username}
-              </span>
+          {user ? (
+            <div className="flex items-center space-x-3 border-l border-slate-700 pl-6">
+              <div className="flex items-center space-x-2">
+                <User className="h-4 w-4 text-slate-400" />
+                <span className="text-sm text-slate-300">
+                  {user?.displayName || user?.username}
+                </span>
+              </div>
+              <Button variant="ghost" size="icon" onClick={logout}>
+                <LogOut className="h-4 w-4" />
+              </Button>
             </div>
-            <Button variant="ghost" size="icon" onClick={logout}>
-              <LogOut className="h-4 w-4" />
-            </Button>
-          </div>
+          ) : null}
         </div>
       </div>
     </nav>

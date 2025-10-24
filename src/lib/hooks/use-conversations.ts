@@ -38,7 +38,12 @@ export function useConversations() {
 
 export function useConversation(conversationId: string) {
   const queryClient = useQueryClient();
-  const { addMessage, setTyping } = useChatStore();
+  const {
+    addOptimisticMessage,
+    removeOptimisticMessage,
+    markMessageAsError,
+    setTyping,
+  } = useChatStore();
 
   // Get conversation details
   const { data: conversation, isLoading: isLoadingConversation } = useQuery({
@@ -59,24 +64,42 @@ export function useConversation(conversationId: string) {
     mutationFn: (content: string) =>
       conversationsApi.sendMessage(conversationId, { content }),
     onMutate: async (content) => {
-      // Optimistically add user message
-      const userMessage = {
+      // Create optimistic message
+      const optimisticMessage = {
         id: `temp-${Date.now()}`,
         conversationId,
         senderType: SenderType.USER,
         content,
-        isImportant: false,
+        timestamp: new Date().toISOString(), // ✅ Convert to string
+        metadata: undefined,
         conversation: undefined as any,
-        timestamp: new Date().toISOString(),
+        character: null,
       };
-      addMessage(conversationId, userMessage);
+
+      // Add optimistic message
+      addOptimisticMessage(conversationId, optimisticMessage);
       setTyping(conversationId, true);
+
+      return { optimisticMessage };
     },
-    onSuccess: (data) => {
+    onSuccess: (data, variables, context) => {
+      // Remove optimistic message
+      if (context?.optimisticMessage) {
+        removeOptimisticMessage(conversationId, context.optimisticMessage.id);
+      }
+
+      // Invalidate to fetch real messages
       queryClient.invalidateQueries({ queryKey: ["messages", conversationId] });
+      queryClient.invalidateQueries({
+        queryKey: ["conversation", conversationId],
+      });
       setTyping(conversationId, false);
     },
-    onError: () => {
+    onError: (error, variables, context) => {
+      // Mark optimistic message as error
+      if (context?.optimisticMessage) {
+        markMessageAsError(conversationId, context.optimisticMessage.id);
+      }
       toast.error("Failed to send message");
       setTyping(conversationId, false);
     },

@@ -93,7 +93,7 @@
 //   };
 
 //   return (
-//     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950/20 to-slate-950 text-white overflow-hidden">
+//     <div className="min-h-screen bg-linear-to-br from-slate-950 via-purple-950/20 to-slate-950 text-white overflow-hidden">
 //       {/* Animated Background Orbs */}
 //       <div className="fixed inset-0 overflow-hidden pointer-events-none">
 //         <motion.div
@@ -135,10 +135,10 @@
 //               className="flex items-center space-x-2"
 //               whileHover={{ scale: 1.05 }}
 //             >
-//               <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+//               <div className="w-10 h-10 bg-linear-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
 //                 <MessageSquare className="w-6 h-6" />
 //               </div>
-//               <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+//               <span className="text-2xl font-bold bg-linear-to-br from-purple-400 to-pink-400 bg-clip-text text-transparent">
 //                 LoreBot
 //               </span>
 //             </motion.div>
@@ -158,7 +158,7 @@
 //                 Characters
 //               </a>
 //               <motion.button
-//                 className="px-6 py-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg"
+//                 className="px-6 py-2 bg-linear-to-br from-purple-500 to-pink-500 rounded-lg"
 //                 whileHover={{
 //                   scale: 1.05,
 //                   boxShadow: "0 0 20px rgba(168, 85, 247, 0.5)",
@@ -200,7 +200,7 @@
 //               >
 //                 Characters
 //               </a>
-//               <button className="w-full px-6 py-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg">
+//               <button className="w-full px-6 py-2 bg-linear-to-br from-purple-500 to-pink-500 rounded-lg">
 //                 Get Started
 //               </button>
 //             </div>
@@ -219,7 +219,7 @@
 //             <motion.div className="mb-8 inline-block" style={{ y }}>
 //               <h1 className="text-5xl md:text-7xl font-bold mb-6">
 //                 <motion.span
-//                   className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
+//                   className="block bg-linear-to-br from-purple-400 to-pink-400 bg-clip-text text-transparent"
 //                   initial={{ opacity: 0, x: -50 }}
 //                   animate={{ opacity: 1, x: 0 }}
 //                   transition={{ duration: 0.8, delay: 0.2 }}
@@ -227,7 +227,7 @@
 //                   Enter the Realm of
 //                 </motion.span>
 //                 <motion.span
-//                   className="block bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent"
+//                   className="block bg-linear-to-br from-pink-400 to-purple-400 bg-clip-text text-transparent"
 //                   initial={{ opacity: 0, x: 50 }}
 //                   animate={{ opacity: 1, x: 0 }}
 //                   transition={{ duration: 0.8, delay: 0.4 }}
@@ -255,7 +255,7 @@
 //               transition={{ duration: 0.8, delay: 0.8 }}
 //             >
 //               <motion.button
-//                 className="group px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg text-lg font-semibold"
+//                 className="group px-8 py-4 bg-linear-to-br from-purple-500 to-pink-500 rounded-lg text-lg font-semibold"
 //                 whileHover={{
 //                   scale: 1.05,
 //                   boxShadow: "0 0 30px rgba(168, 85, 247, 0.6)",
@@ -305,7 +305,7 @@
 //               >
 //                 <div className="flex items-center space-x-3 mb-3">
 //                   <div
-//                     className={`w-10 h-10 rounded-full bg-gradient-to-br ${char.color}`}
+//                     className={`w-10 h-10 rounded-full bg-linear-to-br ${char.color}`}
 //                   />
 //                   <div>
 //                     <p className="font-semibold text-sm">{char.name}</p>
@@ -329,7 +329,7 @@
 //             viewport={{ once: true }}
 //             transition={{ duration: 0.6 }}
 //           >
-//             <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+//             <span className="bg-linear-to-br from-purple-400 to-pink-400 bg-clip-text text-transparent">
 //               Powered by Magic & AI
 //             </span>
 //           </motion.h2>
@@ -349,7 +349,7 @@
 //                 whileHover={{ scale: 1.05, y: -5 }}
 //               >
 //                 <motion.div
-//                   className="w-12 h-12 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg flex items-center justify-center mb-4"
+//                   className="w-12 h-12 bg-linear-to-br from-purple-500/20 to-pink-500/20 rounded-lg flex items-center justify-center mb-4"
 //                   whileHover={{ rotate: 360 }}
 //                   transition={{ duration: 0.5 }}
 //                 >
@@ -373,7 +373,7 @@
 //             viewport={{ once: true }}
 //             transition={{ duration: 0.6 }}
 //           >
-//             <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+//             <span className="bg-linear-to-br from-purple-400 to-pink-400 bg-clip-text text-transparent">
 //               Meet the Characters
 //             </span>
 //           </motion.h2>
@@ -403,7 +403,7 @@
 //                 whileHover={{ scale: 1.05, y: -10 }}
 //               >
 //                 <motion.div
-//                   className={`w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br ${char.color} flex items-center justify-center text-3xl font-bold`}
+//                   className={`w-24 h-24 mx-auto mb-6 rounded-full bg-linear-to-br ${char.color} flex items-center justify-center text-3xl font-bold`}
 //                   whileHover={{ rotate: 360, scale: 1.1 }}
 //                   transition={{ duration: 0.5 }}
 //                 >
@@ -437,7 +437,7 @@
 //             viewport={{ once: true }}
 //             transition={{ duration: 0.6 }}
 //           >
-//             <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10 blur-2xl rounded-3xl" />
+//             <div className="absolute inset-0 bg-linear-to-br from-purple-500/10 to-pink-500/10 blur-2xl rounded-3xl" />
 //             <div className="relative">
 //               <motion.h2
 //                 className="text-4xl md:text-5xl font-bold mb-6"
@@ -446,7 +446,7 @@
 //                 viewport={{ once: true }}
 //                 transition={{ duration: 0.6, delay: 0.2 }}
 //               >
-//                 <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+//                 <span className="bg-linear-to-br from-purple-400 to-pink-400 bg-clip-text text-transparent">
 //                   Begin Your Adventure
 //                 </span>
 //               </motion.h2>
@@ -461,7 +461,7 @@
 //                 unforgettable conversations
 //               </motion.p>
 //               <motion.button
-//                 className="px-10 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg text-lg font-semibold"
+//                 className="px-10 py-4 bg-linear-to-br from-purple-500 to-pink-500 rounded-lg text-lg font-semibold"
 //                 whileHover={{
 //                   scale: 1.05,
 //                   boxShadow: "0 0 30px rgba(168, 85, 247, 0.6)",
@@ -488,10 +488,10 @@
 //             whileInView={{ opacity: 1 }}
 //             viewport={{ once: true }}
 //           >
-//             <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+//             <div className="w-8 h-8 bg-linear-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
 //               <MessageSquare className="w-5 h-5" />
 //             </div>
-//             <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+//             <span className="text-xl font-bold bg-linear-to-br from-purple-400 to-pink-400 bg-clip-text text-transparent">
 //               LoreBot
 //             </span>
 //           </motion.div>
@@ -502,25 +502,17 @@
 //   );
 // }
 
-import React, { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import {
-  MessageSquare,
-  Sparkles,
-  Zap,
-  Shield,
-  ArrowRight,
-  Menu,
-  X,
-  BookOpen,
-} from "lucide-react";
+import { MessageSquare, Sparkles, Zap, Shield, ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useAuthStore } from "@/lib/stores/auth-store";
+import Link from "next/link";
+import PublicNavbar from "@/components/layout/public-navbar";
 
 export default function LorebotLanding() {
   const router = useRouter();
   const { isAuthenticated, hasHydrated } = useAuthStore();
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], [0, -50]);
 
@@ -604,7 +596,7 @@ export default function LorebotLanding() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950/20 to-slate-950 text-white overflow-hidden">
+    <div className="min-h-screen bg-linear-to-br from-slate-950 via-purple-950/20 to-slate-950 text-white overflow-hidden">
       {/* Animated Background Orbs */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -634,100 +626,7 @@ export default function LorebotLanding() {
         />
       </div>
 
-      {/* Navigation */}
-      <motion.nav
-        className="relative z-50 border-b border-slate-800/50 backdrop-blur-xl bg-slate-950/80"
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <motion.div
-              className="flex items-center space-x-2"
-              whileHover={{ scale: 1.05 }}
-            >
-              <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-                <MessageSquare className="w-6 h-6" />
-              </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                LoreBot
-              </span>
-            </motion.div>
-
-            {/* Desktop Menu */}
-            <div className="hidden md:flex items-center space-x-8">
-              <a
-                href="#features"
-                className="hover:text-purple-400 transition-colors"
-              >
-                Features
-              </a>
-              <a
-                href="#characters"
-                className="hover:text-purple-400 transition-colors"
-              >
-                Characters
-              </a>
-              <a
-                href="#about"
-                className="hover:text-purple-400 transition-colors"
-              >
-                About
-              </a>
-              <motion.button
-                className="px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg font-medium"
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: "0 0 20px rgba(168, 85, 247, 0.4)",
-                }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Get Started
-              </motion.button>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <button
-              className="md:hidden p-2"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              {mobileMenuOpen ? <X /> : <Menu />}
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Menu */}
-        <motion.div
-          initial={false}
-          animate={{ height: mobileMenuOpen ? "auto" : 0 }}
-          className="md:hidden overflow-hidden border-t border-slate-800 bg-slate-950/95 backdrop-blur-xl"
-        >
-          <div className="px-4 py-4 space-y-3">
-            <a
-              href="#features"
-              className="block py-2 hover:text-purple-400 transition-colors"
-            >
-              Features
-            </a>
-            <a
-              href="#characters"
-              className="block py-2 hover:text-purple-400 transition-colors"
-            >
-              Characters
-            </a>
-            <a
-              href="#about"
-              className="block py-2 hover:text-purple-400 transition-colors"
-            >
-              About
-            </a>
-            <button className="w-full px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg">
-              Get Started
-            </button>
-          </div>
-        </motion.div>
-      </motion.nav>
+      <PublicNavbar />
 
       {/* Hero Section */}
       <section className="relative z-10 pt-20 pb-32 px-4">
@@ -750,11 +649,11 @@ export default function LorebotLanding() {
               transition={{ duration: 3, repeat: Infinity }}
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                <span className="bg-linear-to-br from-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Enter the Realm of
                 </span>
                 <br />
-                <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
+                <span className="bg-linear-to-br from-pink-400 to-purple-400 bg-clip-text text-transparent">
                   Living Stories
                 </span>
               </h1>
@@ -767,7 +666,7 @@ export default function LorebotLanding() {
               transition={{ delay: 0.3, duration: 0.8 }}
             >
               Immerse yourself in conversations with AI characters that
-              remember, evolve, and create unique narratives with every
+              remember, evolve and create unique narratives with every
               interaction
             </motion.p>
 
@@ -778,11 +677,12 @@ export default function LorebotLanding() {
               transition={{ delay: 0.6, duration: 0.8 }}
             >
               <motion.button
-                className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg text-lg font-semibold"
+                className="group px-8 py-4 bg-linear-to-br from-purple-600 to-pink-600 rounded-lg text-lg font-semibold cursor-pointer"
                 whileHover={{
                   scale: 1.05,
                   boxShadow: "0 20px 40px rgba(168, 85, 247, 0.4)",
                 }}
+                onClick={() => router.push("/register")}
                 whileTap={{ scale: 0.95 }}
               >
                 Start Your Journey
@@ -794,7 +694,7 @@ export default function LorebotLanding() {
                   <ArrowRight className="inline-block" />
                 </motion.span>
               </motion.button>
-              <motion.button
+              {/* <motion.button
                 className="px-8 py-4 border-2 border-purple-500/50 rounded-lg text-lg font-semibold backdrop-blur-sm"
                 whileHover={{
                   scale: 1.05,
@@ -804,7 +704,7 @@ export default function LorebotLanding() {
                 whileTap={{ scale: 0.95 }}
               >
                 Watch Demo
-              </motion.button>
+              </motion.button> */}
             </motion.div>
           </motion.div>
 
@@ -834,7 +734,7 @@ export default function LorebotLanding() {
                 }}
               >
                 <div className="flex items-center space-x-3 mb-3">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-lg font-bold">
+                  <div className="w-12 h-12 rounded-full bg-linear-to-br from-purple-500 to-pink-500 flex items-center justify-center text-lg font-bold">
                     {char.name[0]}
                   </div>
                   <div className="text-left">
@@ -861,7 +761,7 @@ export default function LorebotLanding() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <span className="bg-linear-to-br from-purple-400 to-pink-400 bg-clip-text text-transparent">
               Powered by Magic & AI
             </span>
           </motion.h2>
@@ -884,7 +784,7 @@ export default function LorebotLanding() {
                 }}
               >
                 <motion.div
-                  className="w-12 h-12 bg-gradient-to-br from-purple-600/30 to-pink-600/30 rounded-lg flex items-center justify-center mb-4"
+                  className="w-12 h-12 bg-linear-to-br from-purple-600/30 to-pink-600/30 rounded-lg flex items-center justify-center mb-4"
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
                 >
@@ -910,7 +810,7 @@ export default function LorebotLanding() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <span className="bg-linear-to-br from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Meet the Characters
               </span>
             </h2>
@@ -935,7 +835,7 @@ export default function LorebotLanding() {
                 whileHover={{ y: -10, scale: 1.02 }}
               >
                 <motion.div
-                  className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center text-2xl font-bold"
+                  className="w-20 h-20 mx-auto mb-4 rounded-full bg-linear-to-br from-purple-600 to-pink-600 flex items-center justify-center text-2xl font-bold"
                   whileHover={{ scale: 1.1, rotate: 5 }}
                 >
                   {char.name[0]}
@@ -967,14 +867,14 @@ export default function LorebotLanding() {
       <section className="relative z-10 py-20 px-4">
         <div className="max-w-4xl mx-auto">
           <motion.div
-            className="relative p-12 rounded-3xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-md border border-purple-500/30"
+            className="relative p-12 rounded-3xl bg-linear-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-md border border-purple-500/30"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
             <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10 blur-2xl rounded-3xl"
+              className="absolute inset-0 bg-linear-to-br from-purple-500/10 to-pink-500/10 blur-2xl rounded-3xl"
               animate={{
                 opacity: [0.3, 0.6, 0.3],
                 scale: [1, 1.05, 1],
@@ -983,7 +883,7 @@ export default function LorebotLanding() {
             />
             <div className="relative text-center">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                <span className="bg-linear-to-br from-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Begin Your Adventure
                 </span>
               </h2>
@@ -992,14 +892,15 @@ export default function LorebotLanding() {
                 unforgettable conversations
               </p>
               <motion.button
-                className="px-10 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg text-lg font-semibold"
+                onClick={() => router.push("/characters")}
+                className="cursor-pointer px-10 py-4 bg-linear-to-br from-purple-600 to-pink-600 rounded-lg text-lg font-semibold"
                 whileHover={{
                   scale: 1.05,
                   boxShadow: "0 20px 60px rgba(168, 85, 247, 0.5)",
                 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Start Free Today
+                Start Conversation Now
               </motion.button>
             </div>
           </motion.div>
@@ -1013,10 +914,10 @@ export default function LorebotLanding() {
             className="flex items-center justify-center space-x-2 mb-4"
             whileHover={{ scale: 1.05 }}
           >
-            <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-linear-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
               <MessageSquare className="w-5 h-5" />
             </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <span className="text-xl font-bold bg-linear-to-br from-purple-400 to-pink-400 bg-clip-text text-transparent">
               LoreBot
             </span>
           </motion.div>

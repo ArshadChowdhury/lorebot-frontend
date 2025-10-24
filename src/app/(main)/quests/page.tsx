@@ -65,7 +65,7 @@ export default function QuestsPage() {
     <div className="space-y-8">
       {/* Header */}
       <div className="text-center space-y-2">
-        <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+        <h1 className="text-4xl font-bold bg-linear-to-br from-purple-400 to-pink-400 bg-clip-text text-transparent">
           Quest Log
         </h1>
         <p className="text-slate-400">Track and manage your adventures</p>
@@ -164,7 +164,7 @@ export default function QuestsPage() {
                     </div>
                     <div className="w-full bg-slate-700 rounded-full h-2">
                       <div
-                        className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full transition-all duration-500"
+                        className="bg-linear-to-br from-purple-500 to-pink-500 h-2 rounded-full transition-all duration-500"
                         style={{ width: `${quest.progress}%` }}
                       />
                     </div>

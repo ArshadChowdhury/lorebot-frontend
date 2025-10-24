@@ -43,7 +43,7 @@ export default function CharactersPage() {
   return (
     <div className="space-y-8">
       <div className="text-center space-y-2">
-        <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+        <h1 className="text-4xl font-bold bg-linear-to-br from-purple-400 to-pink-400 bg-clip-text text-transparent">
           Meet the Characters
         </h1>
         <p className="text-slate-400">

@@ -106,7 +106,7 @@ export default function CharacterDetailPage({
         transition={{ duration: 0.5 }}
       >
         <Card className="overflow-hidden">
-          <div className="relative h-64 md:h-80 bg-gradient-to-br from-purple-900/40 to-pink-900/40">
+          <div className="relative h-64 md:h-80 bg-linear-to-br from-purple-900/40 to-pink-900/40">
             <Image
               src={getCharacterImage(character.name)}
               alt={character.name}
@@ -120,7 +120,7 @@ export default function CharacterDetailPage({
               <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
                 <div>
                   <motion.h1
-                    className="text-4xl md:text-5xl font-bold mb-2 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
+                    className="text-4xl md:text-5xl font-bold mb-2 bg-linear-to-br from-purple-400 to-pink-400 bg-clip-text text-transparent"
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.2 }}
@@ -154,7 +154,7 @@ export default function CharacterDetailPage({
                     onClick={handleStartChat}
                     size="lg"
                     disabled={isStarting}
-                    className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
+                    className="bg-linear-to-br from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
                   >
                     <MessageSquare className="mr-2 h-5 w-5" />
                     {isStarting ? "Starting..." : "Start Conversation"}
@@ -319,7 +319,7 @@ export default function CharacterDetailPage({
                     </div>
                     <div className="w-full bg-slate-700 rounded-full h-2">
                       <motion.div
-                        className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full"
+                        className="bg-linear-to-br from-purple-500 to-pink-500 h-2 rounded-full"
                         initial={{ width: 0 }}
                         animate={{
                           width: `${character.currentMood.intensity * 10}%`,
@@ -335,12 +335,12 @@ export default function CharacterDetailPage({
 
           {/* Quick Actions */}
           <motion.div variants={itemVariants}>
-            <Card className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 border-purple-500/30">
+            <Card className="bg-linear-to-br from-purple-900/20 to-pink-900/20 border-purple-500/30">
               <CardContent className="pt-6">
                 <Button
                   onClick={handleStartChat}
                   disabled={isStarting}
-                  className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
+                  className="w-full bg-linear-to-br from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
                   size="lg"
                 >
                   <MessageSquare className="mr-2 h-5 w-5" />

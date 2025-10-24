@@ -103,7 +103,7 @@ export function CharacterCard({ character }: CharacterCardProps) {
 
   return (
     <Card className="group hover:border-purple-500/50 transition-all duration-300 overflow-hidden">
-      <div className="relative h-48 w-full overflow-hidden bg-gradient-to-br from-purple-900/20 to-pink-900/20">
+      <div className="relative h-48 w-full overflow-hidden bg-linear-to-br from-purple-900/20 to-pink-900/20">
         <Image
           src={getCharacterImage()}
           alt={character.name}
