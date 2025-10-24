@@ -1,26 +1,14 @@
 "use client";
 
-import { useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { MessageSquare, Sparkles, Zap, Shield, ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { useAuthStore } from "@/lib/stores/auth-store";
-import Link from "next/link";
 import PublicNavbar from "@/components/layout/public-navbar";
 
 export default function LorebotLanding() {
   const router = useRouter();
-  const { isAuthenticated, hasHydrated } = useAuthStore();
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], [0, -50]);
-
-  useEffect(() => {
-    if (hasHydrated) {
-      if (isAuthenticated) {
-        router.replace("/dashboard");
-      }
-    }
-  }, [isAuthenticated, hasHydrated, router]);
 
   const features = [
     {

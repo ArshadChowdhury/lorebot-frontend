@@ -4,15 +4,7 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import { useQuery } from "@tanstack/react-query";
 import { motion } from "framer-motion";
-import {
-  ArrowLeft,
-  MapPin,
-  MessageSquare,
-  Sparkles,
-  BookOpen,
-  Heart,
-  Zap,
-} from "lucide-react";
+import { ArrowLeft, MapPin, MessageSquare, BookOpen, Zap } from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { charactersApi } from "@/lib/api/characters";
@@ -32,12 +24,6 @@ export default function CharacterDetailPage({
     queryKey: ["character", id],
     queryFn: () => charactersApi.getById(id),
   });
-
-  const getCharacterImage = (name: string) => {
-    return `https://ui-avatars.com/api/?name=${encodeURIComponent(
-      name
-    )}&size=400&background=7c3aed&color=fff&bold=true`;
-  };
 
   const handleStartChat = () => {
     startConversation(id);
@@ -65,6 +51,21 @@ export default function CharacterDetailPage({
       </div>
     );
   }
+
+  const getCharacterImage = () => {
+    if (character.avatarUrl) {
+      const match = character.avatarUrl.match(/\/d\/([a-zA-Z0-9_-]+)/);
+      if (match) {
+        const fileId = match[1];
+        return `https://drive.google.com/uc?export=view&id=${fileId}`;
+      }
+      return character.avatarUrl; // fallback in case it’s already a direct link
+    }
+
+    return `https://ui-avatars.com/api/?name=${encodeURIComponent(
+      character.name
+    )}&size=200&background=7c3aed&color=fff&bold=true`;
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -108,13 +109,13 @@ export default function CharacterDetailPage({
         <Card className="overflow-hidden">
           <div className="relative h-64 md:h-80 bg-linear-to-br from-purple-900/40 to-pink-900/40">
             <Image
-              src={getCharacterImage(character.name)}
+              src={getCharacterImage()}
               alt={character.name}
               fill
-              className="object-cover opacity-50"
+              className="object-contain opacity-50"
               unoptimized
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-slate-950/80 to-transparent" />
 
             <div className="absolute bottom-0 left-0 right-0 p-8">
               <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
@@ -154,7 +155,7 @@ export default function CharacterDetailPage({
                     onClick={handleStartChat}
                     size="lg"
                     disabled={isStarting}
-                    className="bg-linear-to-br from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
+                    className="text-white bg-linear-to-br from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
                   >
                     <MessageSquare className="mr-2 h-5 w-5" />
                     {isStarting ? "Starting..." : "Start Conversation"}
@@ -175,23 +176,6 @@ export default function CharacterDetailPage({
       >
         {/* Main Content - 2 columns */}
         <div className="md:col-span-2 space-y-6">
-          {/* Description */}
-          <motion.div variants={itemVariants}>
-            <Card>
-              <CardHeader>
-                <h2 className="text-2xl font-bold flex items-center">
-                  <Sparkles className="mr-2 h-6 w-6 text-purple-400" />
-                  About
-                </h2>
-              </CardHeader>
-              <CardContent>
-                <p className="text-slate-300 leading-relaxed">
-                  {character.description}
-                </p>
-              </CardContent>
-            </Card>
-          </motion.div>
-
           {/* Backstory */}
           <motion.div variants={itemVariants}>
             <Card>
@@ -242,34 +226,6 @@ export default function CharacterDetailPage({
 
         {/* Sidebar - 1 column */}
         <div className="space-y-6">
-          {/* Personality Traits */}
-          <motion.div variants={itemVariants}>
-            <Card>
-              <CardHeader>
-                <h2 className="text-xl font-bold flex items-center">
-                  <Heart className="mr-2 h-5 w-5 text-purple-400" />
-                  Personality
-                </h2>
-              </CardHeader>
-              <CardContent>
-                {/* <div className="flex flex-wrap gap-2">
-                  {character.personality?.map((trait: string, i: number) => (
-                    <motion.span
-                      key={i}
-                      className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm border border-purple-500/30"
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: 0.6 + i * 0.05 }}
-                      whileHover={{ scale: 1.05 }}
-                    >
-                      {trait}
-                    </motion.span>
-                  ))}
-                </div> */}
-              </CardContent>
-            </Card>
-          </motion.div>
-
           {/* Knowledge Domains */}
           <motion.div variants={itemVariants}>
             <Card>
@@ -340,7 +296,7 @@ export default function CharacterDetailPage({
                 <Button
                   onClick={handleStartChat}
                   disabled={isStarting}
-                  className="w-full bg-linear-to-br from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
+                  className="w-full text-white bg-linear-to-br from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
                   size="lg"
                 >
                   <MessageSquare className="mr-2 h-5 w-5" />

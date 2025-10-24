@@ -4,13 +4,13 @@ import { WorldEvent } from "../types";
 export const worldStateApi = {
   // Get active world events
   getActive: async (): Promise<WorldEvent[]> => {
-    const { data } = await apiClient.get<WorldEvent[]>("/world-state");
+    const { data } = await apiClient.get<WorldEvent[]>("/world-state/active");
     return data;
   },
 
   // Get all events (requires auth)
   getAll: async (): Promise<WorldEvent[]> => {
-    const { data } = await apiClient.get<WorldEvent[]>("/world-state/all");
+    const { data } = await apiClient.get<WorldEvent[]>("/world-state");
     return data;
   },
 

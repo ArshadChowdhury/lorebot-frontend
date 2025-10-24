@@ -83,7 +83,7 @@ interface CharacterCardProps {
     role: string;
     personality: string[];
     backstory: string;
-    imageUrl?: string;
+    avatarUrl?: string;
   };
 }
 
@@ -91,7 +91,15 @@ export function CharacterCard({ character }: CharacterCardProps) {
   const { startConversation, isStarting } = useConversations();
 
   const getCharacterImage = () => {
-    if (character.imageUrl) return character.imageUrl;
+    if (character.avatarUrl) {
+      const match = character.avatarUrl.match(/\/d\/([a-zA-Z0-9_-]+)/);
+      if (match) {
+        const fileId = match[1];
+        return `https://drive.google.com/uc?export=view&id=${fileId}`;
+      }
+      return character.avatarUrl; // fallback in case it’s already a direct link
+    }
+
     return `https://ui-avatars.com/api/?name=${encodeURIComponent(
       character.name
     )}&size=200&background=7c3aed&color=fff&bold=true`;
@@ -103,12 +111,12 @@ export function CharacterCard({ character }: CharacterCardProps) {
 
   return (
     <Card className="group hover:border-purple-500/50 transition-all duration-300 overflow-hidden">
-      <div className="relative h-48 w-full overflow-hidden bg-linear-to-br from-purple-900/20 to-pink-900/20">
+      <div className="relative h-58 w-full overflow-hidden bg-linear-to-br from-purple-900/20 to-pink-900/20">
         <Image
           src={getCharacterImage()}
           alt={character.name}
           fill
-          className="object-cover group-hover:scale-110 transition-transform duration-300"
+          className="object-contain group-hover:scale-110 transition-transform duration-300"
           unoptimized
         />
         <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-slate-950/50 to-transparent" />
@@ -122,7 +130,7 @@ export function CharacterCard({ character }: CharacterCardProps) {
           >
             {character.name}
           </Link>
-          <p className="text-sm text-purple-400">{character.role}</p>
+          <p className="text-sm text-purple-400 mt-2">{character.role}</p>
         </div>
       </CardHeader>
 

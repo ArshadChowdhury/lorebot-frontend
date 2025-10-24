@@ -23,7 +23,7 @@ export function MessageBubble({ message, characterName }: MessageBubbleProps) {
       {/* Avatar */}
       <div
         className={cn(
-          "w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0",
+          "w-8 h-8 rounded-full flex items-center justify-center shrink-0",
           isUser ? "bg-purple-600" : "bg-slate-700"
         )}
       >
