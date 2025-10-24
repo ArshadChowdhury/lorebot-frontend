@@ -145,11 +145,11 @@ export default function DashboardPage() {
                       <p className="font-medium">{quest.title}</p>
                       <span
                         className={`text-xs px-2 py-1 rounded ${
-                          quest.difficulty === "easy"
+                          quest.difficulty === "Easy"
                             ? "bg-green-900/30 text-green-400"
-                            : quest.difficulty === "medium"
+                            : quest.difficulty === "Medium"
                             ? "bg-yellow-900/30 text-yellow-400"
-                            : quest.difficulty === "hard"
+                            : quest.difficulty === "Hard"
                             ? "bg-orange-900/30 text-orange-400"
                             : "bg-purple-900/30 text-purple-400"
                         }`}

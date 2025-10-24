@@ -111,7 +111,7 @@ export function CharacterCard({ character }: CharacterCardProps) {
           className="object-cover group-hover:scale-110 transition-transform duration-300"
           unoptimized
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-slate-950/50 to-transparent" />
       </div>
 
       <CardHeader>

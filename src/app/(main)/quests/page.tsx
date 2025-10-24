@@ -135,7 +135,7 @@ export default function QuestsPage() {
                       {quest.status}
                     </span>
                     <span
-                      className={`text-xs px-2 py-1 rounded capitalize ${getDifficultyColor(
+                      className={`text-xs text-center px-2 py-1 rounded capitalize ${getDifficultyColor(
                         quest.difficulty
                       )}`}
                     >

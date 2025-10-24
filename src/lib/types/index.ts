@@ -127,10 +127,10 @@ export enum QuestStatus {
 }
 
 export enum QuestDifficulty {
-  EASY = "easy",
-  MEDIUM = "medium",
-  HARD = "hard",
-  LEGENDARY = "legendary",
+  EASY = "Easy",
+  MEDIUM = "Medium",
+  HARD = "Hard",
+  LEGENDARY = "Legendary",
 }
 
 export interface Quest {

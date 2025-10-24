@@ -64,6 +64,7 @@ export function useAuth() {
     user,
     isAuthenticated,
     isLoadingProfile,
+    profileData,
     login: loginMutation.mutate,
     register: registerMutation.mutate,
     logout,
