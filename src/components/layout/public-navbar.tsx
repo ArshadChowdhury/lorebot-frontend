@@ -4,7 +4,7 @@ import Link from "next/link";
 import { MessageSquare, X, Menu } from "lucide-react";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
 const PublicNavbar = () => {
   const router = useRouter();

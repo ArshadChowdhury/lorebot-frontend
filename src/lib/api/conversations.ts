@@ -3,22 +3,10 @@ import { Conversation, Message, SendMessageDto } from "../types";
 
 export const conversationsApi = {
   // Start new conversation
-  // start: async (characterId: string): Promise<Conversation> => {
-  //   const { data } = await apiClient.post<Conversation>(
-  //     `/conversations/start/${characterId}`
-  //     // {
-  //     //   characterId,
-  //     // }
-  //   );
-  //   return data;
-  // },
 
   start: async (characterId: string) => {
     const response = await apiClient.post<Conversation>(
       `/conversations/start/${characterId}`
-      // {
-      //   characterId,
-      // }
     );
     return response.data;
   },

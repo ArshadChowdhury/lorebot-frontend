@@ -16,7 +16,7 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/dashboard" className="flex items-center space-x-2">
           <Sparkles className="h-6 w-6 text-purple-400" />
-          <span className="text-xl font-bold bg-gradient-to-br from-purple-400 to-pink-400 bg-clip-text text-transparent">
+          <span className="text-xl font-bold bg-linear-to-br from-purple-400 to-pink-400 bg-clip-text text-transparent">
             LoreBot
           </span>
         </Link>

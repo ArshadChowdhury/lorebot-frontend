@@ -180,17 +180,6 @@ export default function LorebotLanding() {
                   <ArrowRight className="inline-block" />
                 </motion.span>
               </motion.button>
-              {/* <motion.button
-                className="px-8 py-4 border-2 border-purple-500/50 rounded-lg text-lg font-semibold backdrop-blur-sm"
-                whileHover={{
-                  scale: 1.05,
-                  borderColor: "rgba(168, 85, 247, 0.8)",
-                  backgroundColor: "rgba(168, 85, 247, 0.1)",
-                }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Watch Demo
-              </motion.button> */}
             </motion.div>
           </motion.div>
 

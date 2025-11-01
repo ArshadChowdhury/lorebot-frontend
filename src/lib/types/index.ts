@@ -86,21 +86,6 @@ export enum SenderType {
   SYSTEM = "system",
 }
 
-// export interface Message {
-//   id: string;
-//   conversationId: string;
-//   senderType: SenderType;
-//   content: string;
-//   metadata?: {
-//     mood?: string;
-//     questUpdate?: any;
-//     actionTaken?: string;
-//     imageUrl?: string;
-//   };
-//   isImportant: boolean;
-//   timestamp: string;
-// }
-
 export interface Message {
   id: string;
   conversationId: string;

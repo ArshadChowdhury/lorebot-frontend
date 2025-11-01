@@ -8,7 +8,6 @@ import { SenderType } from "../types";
 export function useConversations() {
   const queryClient = useQueryClient();
   const router = useRouter();
-  const { addMessage, setTyping } = useChatStore();
 
   // Get all conversations
   const { data: conversations, isLoading } = useQuery({

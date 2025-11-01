@@ -5,14 +5,11 @@ import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
 import { useAuth } from "@/lib/hooks/use-auth";
 import { useQuery } from "@tanstack/react-query";
-import { authApi } from "@/lib/api/auth"; // adjust path
-import React from "react";
+import { authApi } from "@/lib/api/auth";
 
 export default function MyProfile() {
-  // prefer values from your useAuth hook (it already has the query), if available
   const { isLoadingProfile, isAuthenticated, profileData } = useAuth() as any;
 
-  // Fallback: directly call the query if profileData is missing — this is robust during dev
   const {
     data: directProfileData,
     isLoading: isLoadingDirect,
@@ -20,18 +17,12 @@ export default function MyProfile() {
   } = useQuery({
     queryKey: ["profile"],
     queryFn: authApi.getProfile,
-    enabled: !profileData && isAuthenticated, // only run if hook didn't provide data and user is authenticated
+    enabled: !profileData && isAuthenticated,
     retry: false,
   });
 
-  // choose actual data (support both shapes: { user } or user)
   const raw = profileData ?? directProfileData;
   const user = raw?.user ?? raw ?? null;
-
-  // Debugging helper (remove once confirmed)
-  // console.log("profileData(from hook):", profileData);
-  // console.log("directProfileData:", directProfileData);
-  // console.log("resolved user:", user);
 
   if (!isAuthenticated) {
     return (
