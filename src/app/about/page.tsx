@@ -211,7 +211,7 @@ export default function AboutPage() {
               <div className="space-y-2">
                 <h4 className="font-semibold text-purple-400">Frontend</h4>
                 <ul className="space-y-1 text-sm text-slate-400">
-                  <li>• Next.js 14 with App Router</li>
+                  <li>• Next.js 16 with App Router</li>
                   <li>• React with TypeScript</li>
                   <li>• TanStack Query for data management</li>
                   <li>• Zustand for state management</li>
@@ -362,7 +362,7 @@ export default function AboutPage() {
         <div className="text-center py-8 space-y-2">
           <p className="text-slate-400">
             Created with <Heart className="h-4 w-4 inline text-pink-400" />{" "}
-            using Next.js, NestJS, and Google Gemini AI
+            using Next.js, NestJS and Google Gemini AI
           </p>
           <p className="text-sm text-slate-500">
             © 2025 LoreBot. All rights reserved.
