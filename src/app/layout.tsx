@@ -4,6 +4,7 @@ import "./globals.css";
 import { QueryProvider } from "@/providers/query-provider";
 import { Toaster } from "sonner";
 import { HydrationWrapper } from "@/components/others/hydration-wrapper";
+import Footer from "@/components/others/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +22,9 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={inter.className}>
         <QueryProvider>
-          <HydrationWrapper>{children}</HydrationWrapper>
+          <HydrationWrapper>{children}
+            <Footer />
+          </HydrationWrapper>
           <Toaster position="top-right" richColors />
         </QueryProvider>
       </body>

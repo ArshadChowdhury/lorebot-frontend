@@ -365,7 +365,7 @@ export default function AboutPage() {
             using Next.js, NestJS and Google Gemini AI
           </p>
           <p className="text-sm text-slate-500">
-            © 2025 LoreBot. All rights reserved.
+            © 2026 LoreBot. All rights reserved.
           </p>
         </div>
       </div>

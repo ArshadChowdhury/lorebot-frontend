@@ -13,6 +13,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { MessageSquare } from "lucide-react";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { cn } from "@/lib/utils"; // Optional: if you use a cn() helper for conditional classes
 
@@ -24,7 +26,7 @@ const loginSchema = z.object({
     .email("Please enter a valid email address"),
   password: z
     .string()
-    .min(6, "Password must be at least 6 characters long")
+    .min(1, "Password is required")
     .max(50, "Password too long"),
 });
 
@@ -53,6 +55,19 @@ export function LoginForm() {
 
   return (
     <Card className="w-full max-w-md">
+       <Link href="/">
+        <motion.div
+          className="flex justify-center items-center space-x-2"
+          whileHover={{ scale: 1.05 }}
+        >
+          <div className="w-7 h-7 bg-linear-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+            <MessageSquare className="w-3 h-3" />
+          </div>
+          <span className="text-2xl font-bold bg-linear-to-br from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            LoreBot
+          </span>
+        </motion.div>
+      </Link>
       <CardHeader>
         <CardTitle className="text-3xl text-center bg-linear-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
           Welcome Back
@@ -105,7 +120,7 @@ export function LoginForm() {
           </div>
 
           {/* Submit */}
-          <Button type="submit" className="w-full" disabled={isLoggingIn}>
+          <Button type="submit" className="w-full cursor-pointer" disabled={isLoggingIn}>
             {isLoggingIn ? "Entering..." : "Login"}
           </Button>
         </form>
